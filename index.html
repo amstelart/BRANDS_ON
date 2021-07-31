@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BRANDS ON!</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt="logo">
+          </a>
+          <ul class="desktop-nav">
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">About us</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Our services</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">The way we work</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Talk to us</a>
+            </li>
+          </ul>
+          <a href="#menu" data-toggle="modal" class="menu-btn">
+            <!-- <img src="img/menu.svg" alt=""> -->
+            <svg width="77" height="24" viewbox="0 0 77 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="52" width="25" height="4" fill="white"/>
+              <rect x="52" y="10" width="25" height="4" fill="white"/>
+              <rect x="52" y="20" width="25" height="4" fill="white"/>
+              <path d="M8.866 17L8.84 12.853L6.864 16.181H5.512L3.536 12.996V17H0.741V7.9H3.263L6.227 12.749L9.113 7.9H11.635L11.661 17H8.866ZM20.7103 14.686V17H13.1443V7.9H20.5413V10.214H16.1603V11.28H20.0083V13.49H16.1603V14.686H20.7103ZM30.8614 7.9V17H28.3394L24.8814 12.866V17H21.8914V7.9H24.4134L27.8714 12.034V7.9H30.8614ZM36.6946 17.208C35.2993 17.208 34.2116 16.831 33.4316 16.077C32.6516 15.323 32.2616 14.2657 32.2616 12.905V7.9H35.3296V12.814C35.3296 13.4813 35.4466 13.9667 35.6806 14.27C35.9233 14.5733 36.27 14.725 36.7206 14.725C37.1713 14.725 37.5136 14.5733 37.7476 14.27C37.9903 13.9667 38.1116 13.4813 38.1116 12.814V7.9H41.1276V12.905C41.1276 14.2657 40.7376 15.323 39.9576 16.077C39.1776 16.831 38.09 17.208 36.6946 17.208Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
+      </header>
+      <main role="main">
+        <section class="intro" style="background-image: url(../img/intro-bg.jpg);">
+          <div class="intro__title">
+            <div class="circle"></div>
+            <div class="white-text">Turn your</div>
+            <div class="orange-text">brands on</div>
+          </div>
+          <span class="scroll-down"></span>
+        </section>
+        <section class="about">
+          <div class="container">
+            <div class="about__inner">
+              <div class="about__heading">
+                <div class="about__title">About <br>us</div>
+                <img src="img/about-img.png" alt>
+              </div>
+              <div class="about__main">
+                <div class="about-card">
+                  <div class="about-card__text">Established in</div>
+                  <div class="about-card__num">2005</div>
+                </div>
+                <div class="about-card">
+                  <div class="about-card__text">Customers</div>
+                  <div class="about-card__num">450+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="anything">
+          <div class="container">
+            <div class="anything__title"><span>Anything</span><span>is possible!</span></div>
+            <div class="anything__inner">
+              <div class="anything__image">
+                <div class="circle"></div>
+                <img src="img/anything-img.png" alt>
+              </div>
+              <div class="anything__main">
+                <div class="anything-box">
+                  We think now’s a really exciting time to be in marketing, a really exciting time to be in advertising and communications.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="clients">
+          <div class="container">
+            <div class="clients__inner">
+              <div class="clients__main">
+                <div class="client-box">
+                  <div class="client-box__title">Clients expect us <br> to take their side</div>
+                  <div class="client-box__image"><img src="img/clients-img-mobile.png" alt></div>
+                  <div class="client-box__text">
+                    <p>The Brandson guarantees professionalism, efficiency and meeting deadlines in the area covered by our team.</p>
+                    <p>We are equipped 100%, involved 365 days and have a 3600 approach, we also have a grain of ‘restlessness’ to become better. </p>
+                    <p>When we speak with the client and listen to insights and expectations, we already draft a SWOT analysis. </p>
+                    <p>With involvement, studying, improvement, discipline and focus on calculated results, we dedicate ourselves to our work and we can provide our clients with certainty of their investment in advertising</p>
+                  </div>
+                  <div class="client-box__bottom">
+                    <span class="orange-text">Liliana URSCHI </span>
+                    <span><svg width="29" height="29"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#seo-icon"/></svg> CEO BrandsON!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="clients__image">
+                <div class="clients-img">
+                  <img src="img/clients-img.png" alt>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="container">
+            <div class="services__title">OUR SERVICES</div>
+            <ul class="services__list">
+              <li class="services__item">
+                <div class="services-card">
+                  <div class="services-card__icon"><svg width="61" height="61"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#service-icon-01"/></svg></div>
+                  <div class="services-card__caption">Marketing <br> strategy through effective relationships/ connections</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services-card">
+                  <div class="services-card__icon"><svg width="61" height="61"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#service-icon-02"/></svg></div>
+                  <div class="services-card__caption">Branding/Creative <br> solutions</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services-card">
+                  <div class="services-card__icon"><svg width="53" height="53"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#service-icon-03"/></svg></div>
+                  <div class="services-card__caption">Content <br> production</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services-card">
+                  <div class="services-card__icon"><svg width="57" height="57"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#service-icon-04"/></svg></div>
+                  <div class="services-card__caption">Events</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services-card">
+                  <div class="services-card__icon"><svg width="52" height="50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#service-icon-05"/></svg></div>
+                  <div class="services-card__caption">Media <br> planning/buying <br> analysis</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services-card">
+                  <div class="services-card__icon"><svg width="55" height="55"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#service-icon-06"/></svg></div>
+                  <div class="services-card__caption">Digital <br>projects</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services-card">
+                  <div class="services-card__icon"></div>
+                  <div class="services-card__caption">Corporate <br> image/PR</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="demand">
+          <div class="container">
+            <div class="demand__inner">
+              <div class="demand__main">
+                <div class="demand-box">
+                  <div class="demand-box__title">Mass demand has been created almost entirely through the development of Advertising</div>
+                  <div class="demand-box__text">
+                    <p>We start by gaining INSIGHT into your business. We work with you to understand your vision and goals
+                      through a STRATEGIC BRIEF, an essential step in meeting your requirements. Not certain of how to
+                      create a brief? Don’t panic, as your trusted advisor we are here to help you.</p>
+                    <p>In collaboration with you, we create the perfect action plan, tailored to your needs. With a brief in place,
+                      we conduct our RESEARCH and hold critical brainstorming sessions to bring the project to fruition. We
+                      ANALYSE all available alternatives and OPTIMISE them for a best outcome that will exceed your
+                      expectations. We deliver RESULTS.</p>
+                    <p>Finally, we review the process and make an action plan to ensure a continuous collaboration that will
+                      help in delivering results and driving your brand even further.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="offer">
+          <div class="container">
+            <div class="offer__inner">
+              <div class="offer__main">
+                <div class="offer-box">
+                  <div class="offer-box__title">Special Offer</div>
+                  <div class="offer-box__image"><img src="img/offer-img-mobile.png" alt></div>
+                  <div class="offer-box__caption">
+                    <p>We start by gaining INSIGHT into your business. We work with you to understand your vision and goals
+                      through a STRATEGIC BRIEF, an essential step in meeting your requirements. Not certain of how to
+                      create a brief? Don’t panic, as your trusted advisor we are here to help you. In collaboration with you, we create the perfect action plan, tailored to your needs. </p>
+                    <p>With a brief in place,
+                      we conduct our RESEARCH and hold critical brainstorming sessions to bring the project to fruition. We
+                      ANALYSE all available alternatives and OPTIMISE them for a best outcome that will exceed your
+                      expectations. We deliver RESULTS.</p>
+                  </div>
+                  <div class="offer-box__action">
+                    <a href="#" class="btn btn--main">Get proposal</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo" style="background-image: url(../img/intro-bg.jpg);">
+        <div class="container">
+          <div class="page-footer__top">
+            <span class="logo">
+              <img src="img/logo.svg" alt="logo">
+            </span>
+            <div class="footer-box">
+              <div class="footer-box__item">
+                <div class="c-phones">+373 22 23 23 41</div>
+                <div class="c-phones">+373 69 14 93 57</div>
+              </div>
+              <div class="footer-box__item">
+                <a href="mailto:welcome@brandson.md" class="c-email">welcome@brandson.md</a>
+              </div>
+              <div class="footer-box__item">
+                <div class="social-box">
+                  <div class="social-box__title">Talk to us</div>
+                  <div class="social-box__group">
+                    <a href="#" target="_blanck" class="social-box__btn fa"><svg width="80" height="80"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#fa"/></svg></a>
+                    <a href="#" target="_blanck" class="social-box__btn youtube"><svg width="80" height="80"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="copyright">Brandson SRL 2021. All rights reserved</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div id="menu" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="modal__close" data-dismiss="modal" aria-label="Закрыть"></a>
+        </div>
+        <div class="modal__body">
+          <ul class="mmenu">
+            <li class="mmenu__item">
+              <a href="#" class="mmenu__link">About us</a>
+            </li>
+            <li class="mmenu__item">
+              <a href="#" class="mmenu__link">Our services</a>
+            </li>
+            <li class="mmenu__item">
+              <a href="#" class="mmenu__link">The way we work</a>
+            </li>
+            <li class="mmenu__item">
+              <a href="#" class="mmenu__link">Talk to us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="modal__footer">
+          <div class="footer-box">
+            <div class="footer-box__item">
+              <div class="c-phones">+373 22 23 23 41</div>
+              <div class="c-phones">+373 69 14 93 57</div>
+            </div>
+            <div class="footer-box__item">
+              <a href="mailto:welcome@brandson.md" class="c-email">welcome@brandson.md</a>
+            </div>
+            <div class="footer-box__item">
+              <div class="social-box">
+                <div class="social-box__title">Talk to us</div>
+                <div class="social-box__group">
+                  <a href="#" target="_blanck" class="social-box__btn fa"><svg width="80" height="80"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#fa"/></svg></a>
+                  <a href="#" target="_blanck" class="social-box__btn youtube"><svg width="80" height="80"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
