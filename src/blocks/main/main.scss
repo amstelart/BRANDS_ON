@@ -1,0 +1,952 @@
+// В этом файле должны быть стили для БЭМ-блока main, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.container {
+  @include container;
+}
+
+.white-text {
+  color: #fff;
+}
+.orange-text {
+  color: #FF7C1D;
+}
+
+.circle {
+  position: absolute;
+  width: 205px;
+  height: 205px;
+  background-color: #FF7C1D;
+  border-radius: 50%;
+}
+
+.intro {
+
+  height: 978px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width:($screen-lg - 1)) {
+    height: 585px;
+  }
+
+  &__title {
+    font-family: $font-family--headings;
+    font-size: 110px;
+    line-height: 1.3;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 60px;
+      padding: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 160px;
+    }
+
+    .white-text,
+    .orange-text {
+      position: relative;
+    }
+
+    .circle {
+      width: 205px;
+      height: 205px;
+      background-color: #FF7C1D;
+      border-radius: 50%;
+      position: absolute;
+      top: 70px;
+      left: -80px;
+
+      @media (max-width:($screen-lg - 1)) {
+        width: 74px;
+        height: 74px;
+        top: -20px;
+        left: -13px;
+      }
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 94px;
+    width: 22px;
+    height: 12px;
+    background-image: url(../img/down-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (max-width:($screen-lg - 1)) {
+      width: 10px;
+      height: 6px;
+      bottom: 40px;
+    }
+  }
+}
+
+.about {
+  background: #E5E5E5;
+  padding: 115px 0;
+
+  @media (max-width:($screen-lg - 1)) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding: 175px 0;
+  }
+
+  &__inner {
+    @include row;
+    align-items: flex-start;
+  }
+
+  &__heading {
+    @include col();
+    @include col(lg, 5);
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: 25px;
+      left: -60px;
+
+      @media (max-width:($screen-lg - 1)) {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        height: auto;
+        margin-top: -87px;
+      }
+    }
+  }
+
+  &__main {
+    @include col();
+    @include col(lg, 7);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $font-family--headings;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 110px;
+    padding-bottom: 160px;
+
+    @media (min-width: $screen-xl) {
+      font-size: 160px;
+    }
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 70px;
+      margin: auto;
+      width: 200px;
+      padding: 0;
+    }
+  }
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+  padding: 35px 40px;
+  margin-bottom: 30px;
+
+  @media (max-width:($screen-lg - 1)) {
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 25px 15px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 55px;
+  }
+
+  &__text {
+    font-weight: 900;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+    }
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 24px;
+    }
+  }
+
+  &__num {
+    font-family: $font-family--headings;
+    color: #FF7C1D;
+    font-weight: 700;
+    font-size: 120px;
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 80px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 120px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      font-size: 170px;
+    }
+  }
+}
+
+.anything {
+  padding: 115px 0;
+  background: #FF7C1D;
+
+  @media (max-width:($screen-lg - 1)) {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  &__inner {
+    @include row;
+    align-items: flex-start;
+  }
+
+  &__image {
+    @include col();
+    @include col(lg, 7);
+    position: relative;
+
+    img {
+      position: relative;
+    }
+
+    .circle {
+      width: 313px;
+      height: 313px;
+      background: #fff;
+      bottom: 80px;
+      left: 90px;
+      @media (max-width:($screen-lg - 1)) {
+        width: 132px;
+        height: 132px;
+      }
+    }
+  }
+  &__main {
+    @include col();
+    @include col(lg, 5);
+  }
+
+  &__title {
+    font-family: $font-family--headings;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #fff;
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 50px;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.anything-box {
+  font-family: $font-family--headings;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.4;
+  font-size: 42px;
+  margin-top: 60px;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 50px;
+  }
+
+  @media (max-width:($screen-xl - 1)) {
+    font-size: 30px;
+  }
+  @media (max-width:($screen-lg - 1)) {
+    margin-top: 0;
+  }
+
+  &:before {
+    content: "";
+    width: 327px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 40px;
+
+    @media (max-width:($screen-lg - 1)) {
+      display: none;
+    }
+  }
+}
+
+.clients {
+  padding: 125px 0;
+
+  @media (max-width:($screen-lg - 1)) {
+    padding: 80px 0 60px;
+  }
+
+  &__inner {
+    @include row;
+    align-items: flex-start
+  }
+  &__image {
+    @include col();
+    @include col(lg, 6);
+    @include col(xxl, 7);
+
+    .clients-img {
+      position: relative;
+
+      img {
+        position: relative;
+      }
+
+      .circle {
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+      }
+
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 80px;
+    }
+    @media (max-width:($screen-lg - 1)) {
+      display: none;
+    }
+  }
+
+  &__main {
+    @include col();
+    @include col(lg, 6);
+    @include col(xxl, 5);
+  }
+}
+
+.client-box {
+
+  &__title {
+
+    font-family: $font-family--headings;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 35px;
+    position: relative;
+    display: inline-block;
+
+    @media (max-width:($screen-xxl - 1)) {
+      font-size: 45px;
+      text-align: center;
+      display: block;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 43px;
+      height: 41px;
+      position: absolute;
+
+      @media (max-width:($screen-lg - 1)) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:before {
+
+      background-image: url(../img/quote-left-orange.svg);
+      top: 0;
+      left: -60px;
+      @media (max-width:($screen-lg - 1)) {
+        left: 0;
+        top: -15px;
+      }
+    }
+    &:after {
+
+      background-image: url(../img/quote-right-orange.svg);
+      bottom: 0;
+      right: -60px;
+      @media (max-width:($screen-lg - 1)) {
+        right: 0;
+        bottom: -15px;
+      }
+    }
+
+  }
+
+  &__image {
+    display: none;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    @media (max-width:($screen-lg - 1)) {
+      display: block;
+    }
+  }
+
+  &__text {
+
+    p {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    @media (max-width:($screen-lg - 1)) {
+      text-align: center;
+    }
+  }
+  &__bottom {
+    border-top: 4px solid #000;
+    padding: 40px 0;
+    display: flex;
+    padding-right: 30px;
+
+    @media (max-width:($screen-xl - 1)) {
+      justify-content: space-between;
+      padding: 25px 15px;
+    }
+
+    span {
+      font-family: $font-family--headings;
+      font-weight: 400;
+      font-size: 25px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      svg {
+        vertical-align: bottom;
+        margin-bottom: 2px;
+        margin-right: 8px;
+      }
+
+      @media (max-width:($screen-lg - 1)) {
+        font-size: 20px;
+      }
+    }
+
+    .orange-text {
+      font-weight: 700;
+      margin-right: 45px;
+      @media (max-width:($screen-lg - 1)) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.services-img-wrap {
+  @media (max-width:($screen-lg - 1)) {
+    display: none;
+  }
+}
+
+.services {
+  background-color: #E5E5E5;
+  padding: 120px 0;
+  overflow: hidden;
+
+
+  .container {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -133px;
+      right: -259px;
+      width: 366px;
+      height: 503px;
+      background-image: url(../img/services-img.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      @media (max-width:($screen-lg - 1)) {
+        display: none;
+      }
+      @media (min-width:$screen-xxl ) {
+        bottom: -120px;
+        right: -140px;
+      }
+    }
+  }
+
+  @media (max-width:($screen-lg - 1)) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-family: $font-family--headings;
+    font-size: 74px;
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width:$screen-xxl ) {
+      font-size: 120px;
+    }
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 45px;
+    }
+  }
+
+  &__list {
+    max-width: 1300px;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-top: 60px;
+
+    &:last-child {
+      .services-card__icon {
+        position: relative;
+        background-image: url(../img/service-icon-07.svg);
+        background-repeat: no-repeat;
+        background-position: 8px 15px;
+      }
+    }
+  }
+}
+
+.services-card {
+
+  width: 265px;
+  text-align: center;
+
+  &__icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-color: #FF7C1D;
+    margin: 0 auto 35px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__caption {
+    font-family: $font-family--headings;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+}
+
+.demand {
+  background: #FF7C1D;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width:($screen-lg - 1)) {
+    background-image: url(../img/demand-img-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top 25% center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__main {
+    padding: 160px 0;
+    width: 672px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 40%;
+      width: 1200px;
+      background-image: url(../img/demand-img.png);
+      background-repeat: no-repeat;
+      background-position: left  center;
+      background-size: contain;
+      @media (min-width: $screen-xxl) {
+        right: 63%;
+      }
+      @media (max-width:($screen-lg - 1)) {
+        display: none;
+      }
+    }
+
+    @media (max-width:($screen-lg - 1)) {
+      padding: 50px 0;
+    }
+  }
+}
+
+.demand-box {
+  @media (max-width:($screen-lg - 1)) {
+    text-align: center;
+  }
+  &__title {
+    font-family: $font-family--headings;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 35px;
+    position: relative;
+
+    @media (max-width:($screen-xxl - 1)) {
+      font-size: 30px;
+      line-height: 1.6;
+      font-weight: 500;
+      padding: 0 40px;
+    }
+    @media (max-width:($screen-lg - 1)) {
+      text-align: center;
+      margin-bottom: 110%;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 43px;
+      height: 41px;
+      position: absolute;
+
+      @media (max-width:($screen-lg - 1)) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:before {
+      background-image: url(../img/quote-left-white.svg);
+      top: 0;
+      left: -60px;
+
+      @media (max-width:($screen-lg - 1)) {
+        top: -15px;
+        left: 0;
+      }
+    }
+    &:after {
+      background-image: url(../img/quote-right-white.svg);
+      bottom: 0;
+      right: -60px;
+      @media (max-width:($screen-lg - 1)) {
+        bottom: -15px;
+        right: 0;
+      }
+    }
+  }
+
+  &__image {
+    display: none;
+    width: 100%;
+    @media (max-width:($screen-lg - 1)) {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    p {
+      margin-bottom: 30px;
+    }
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+}
+
+.offer {
+  overflow: hidden;
+
+  @media (max-width:($screen-lg - 1)) {
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__main {
+    position: relative;
+    padding: 214px 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 1200px;
+      background-image: url(../img/offer-img.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      @media (max-width:($screen-lg - 1)) {
+        display: none;
+      }
+    }
+
+    @media (max-width:($screen-lg - 1)) {
+      padding: 50px 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 605px;
+    }
+  }
+}
+
+.offer-box {
+
+  &__title {
+    font-family: $font-family--headings;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 45px;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    text-align: center;
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__caption {
+    font-size: 16px;
+    line-height: 1.6;
+    p {
+      margin-bottom: 30px;
+    }
+
+  }
+  &__action {
+
+  }
+}
+
+
+.footer-box {
+  &__item {
+    margin-bottom: 15px;
+  }
+}
+
+.c-phones {
+  font-family: $font-family--headings;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+  font-size: 48px;
+  color: #fff;
+  text-decoration: none;
+  @media (max-width:($screen-lg - 1)) {
+    font-size: 30px;
+  }
+}
+
+.c-email {
+  font-family: $font-family--headings;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #FF7C1D;
+
+  @media (max-width:($screen-lg - 1)) {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.social-box {
+
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-family: $font-family--headings;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #FF7C1D;
+    color: #fff;
+    border-radius: 5px;
+    padding: 33px 46px;
+    margin-right: 10px;
+
+    @media (max-width:($screen-lg - 1)) {
+      font-size: 18px;
+      width: 100%;
+      padding: 25px 35px;
+    }
+  }
+
+  &__group {
+    display: flex;
+  }
+
+  &__btn {
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (max-width:($screen-lg - 1)) {
+      svg {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    &.fa {
+      background: #3B5998;
+    }
+
+    &.youtube {
+      background: #E62117;
+      color: #fff;
+    }
+  }
+}
+
+
+
+.fpage {
+  overflow: hidden;
+  padding: 60px 0;
+
+  &--01 {
+    .fpage__inner {
+      &:before {
+        background-image: url(../img/form-img-01.png);
+      }
+    }
+  }
+  &--02 {
+    .fpage__inner {
+      &:before {
+        background-image: url(../img/form-img-02.png);
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    @media (min-width:$screen-xl) {
+      width: 635px;
+    }
+
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      bottom: 0;
+      width: 1200px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: top 60px left;
+
+      @media (min-width:$screen-xl) {
+        display: block;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 420px;
+    display: block;
+
+    @media (min-width:$screen-xl) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family--headings;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media (min-width:$screen-xl) {
+      font-size: 50px;
+    }
+  }
+
+  &__caption {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+}
