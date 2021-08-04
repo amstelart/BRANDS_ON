@@ -102,7 +102,7 @@ $z-index-modal:               100 !default;
   }
 
   &__footer {
-    padding: 25px 50px;
+    padding: 25px 25px;
     flex-shrink: 0;
     text-align: center;
 
@@ -110,6 +110,7 @@ $z-index-modal:               100 !default;
       border-top: 1px solid #C4C4C4;
       padding-top: 33px;
     }
+
     .footer-box__item {
       margin-bottom: 35px;
     }
